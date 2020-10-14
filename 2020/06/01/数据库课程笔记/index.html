@@ -20,28 +20,54 @@
     var CONFIG = {"hostname":"www.ethanloo.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://www.ethanloo.top/index.html">
+  <meta name="description" content="数据库原理与设计期末复习基于MOOC课程https:&#x2F;&#x2F;www.icourse163.org&#x2F;learn&#x2F;RUC-1001655006?tid&#x3D;1450237476 第六章 关系数据理论关系模式 STUDENT（Sno, Sdept, Mname, Cno, Grade）中存在的问题 数据冗余度太大，浪费存储空间。如系主任的名字Mname重复出现，其重复的次数与该系所有学生的所有课程成绩出现次数相">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库课程笔记">
+<meta property="og:url" content="https://www.ethanloo.top/2020/06/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据库原理与设计期末复习基于MOOC课程https:&#x2F;&#x2F;www.icourse163.org&#x2F;learn&#x2F;RUC-1001655006?tid&#x3D;1450237476 第六章 关系数据理论关系模式 STUDENT（Sno, Sdept, Mname, Cno, Grade）中存在的问题 数据冗余度太大，浪费存储空间。如系主任的名字Mname重复出现，其重复的次数与该系所有学生的所有课程成绩出现次数相">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://wx2.sbimg.cn/2020/06/13/1_.md.jpg#vwid=500&vhei=225">
+<meta property="og:image" content="https://wx1.sbimg.cn/2020/06/14/2_.jpg#vwid=667&vhei=349">
+<meta property="og:image" content="https://wx2.sbimg.cn/2020/06/14/2_.jpg#vwid=667&vhei=349">
+<meta property="og:image" content="https://wx2.sbimg.cn/2020/06/14/1_E-R.jpg#vwid=799&vhei=417">
+<meta property="og:image" content="https://wx2.sbimg.cn/2020/06/14/1_.jpg#vwid=746&vhei=521">
+<meta property="og:image" content="https://wx1.sbimg.cn/2020/06/14/1_2.jpg#vwid=1026&vhei=408">
+<meta property="og:image" content="https://icon.qiantucdn.com/20200617/bab0728ced0bb6f5dcb3f714a891c52f2#vwid=1639&vhei=734">
+<meta property="og:image" content="https://icon.qiantucdn.com/20200617/baf0de102162c9945e54af021518b5382#vwid=873&vhei=424">
+<meta property="og:image" content="https://icon.qiantucdn.com/20200617/f4e79a32a3a42820684700d82412d0682#vwid=875&vhei=421">
+<meta property="og:image" content="https://icon.qiantucdn.com/20200617/af05984c5b8b0a6976fb15c288dfc4fb2#vwid=752&vhei=407">
+<meta property="og:image" content="https://icon.qiantucdn.com/20200617/a77bd110b23003a01868ff990fcefd6c2#vwid=701&vhei=389">
+<meta property="og:image" content="https://icon.qiantucdn.com/20200617/f4afbeb13548be19d0c144c80841bfbd2#vwid=624&vhei=159">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617152716743.png#vwid=650&vhei=172">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617160130313.png#vwid=218&vhei=395">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617160402197.png#vwid=627&vhei=316">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617161139387.png#vwid=512&vhei=216">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617161159622.png#vwid=735&vhei=281">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617161851862.png#vwid=819&vhei=238">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617161949978.png#vwid=853&vhei=225">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200617162005637.png#vwid=794&vhei=221">
+<meta property="article:published_time" content="2020-06-01T02:43:00.000Z">
+<meta property="article:modified_time" content="2020-10-14T08:15:44.974Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wx2.sbimg.cn/2020/06/13/1_.md.jpg#vwid=500&vhei=225">
 
-<link rel="canonical" href="https://www.ethanloo.top/">
+<link rel="canonical" href="https://www.ethanloo.top/2020/06/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>数据库课程笔记 | Hexo</title>
   
 
 
@@ -139,346 +165,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://www.ethanloo.top/2020/10/14/%E6%90%AC%E5%AE%B6%E5%95%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/14/%E6%90%AC%E5%AE%B6%E5%95%A6/" class="post-title-link" itemprop="url">搬家啦</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-10-14 21:21:07 / Modified: 21:21:25" itemprop="dateCreated datePublished" datetime="2020-10-14T21:21:07+08:00">2020-10-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://www.ethanloo.top/2020/06/24/2020%E5%B9%B46%E6%9C%88%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/24/2020%E5%B9%B46%E6%9C%88%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">2020年6月刷题日志</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-06-24 09:59:00" itemprop="dateCreated datePublished" datetime="2020-06-24T09:59:00+08:00">2020-06-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-14 16:15:44" itemprop="dateModified" datetime="2020-10-14T16:15:44+08:00">2020-10-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Leetcode-刷题日志"><a href="#Leetcode-刷题日志" class="headerlink" title="Leetcode 刷题日志"></a>Leetcode 刷题日志</h1><p>就从今天（6.24）开始记录自己的刷题情况吧</p>
-<p>日志说明：文笔很差，想到什么写什么，缺乏逻辑</p>
-<p>把解题思路记下来，顺便督促一下自己不要无脑抄题解</p>
-<p>不知道能坚持多久，希望会够久</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624085941874.png" alt="一个月刷题记录"></p>
-<h2 id="2020-6"><a href="#2020-6" class="headerlink" title="2020.6"></a>2020.6</h2><h3 id="6-24"><a href="#6-24" class="headerlink" title="6.24"></a>6.24</h3><p>今天正好是重回leetcode刷题满一个月，就从今天开始记录自己的刷题实况吧</p>
-<p>上次规律的刷题还是在大一上学期学Python的时候，没想到现在已经是大二期末了。</p>
-<p>刷算法题的感觉让我又回到了高中，很纯粹。</p>
-<p>虽然做不出只能抄作业有的时候挺打击人的，但是做出一道题真的很爽！</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624090225796.png" alt="2020.6.24进展"></p>
-<p><strong>每日一题：</strong></p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624090745330.png" alt="最接近的三数之和"></p>
-<p>首先排除复杂度为O(N³)的三层循环的解法</p>
-<p>自己想了一会儿没想到怎么解，就去翻了评论，（明明大一刷过这道题，但还是没长进）</p>
-<p>先排序，然后双指针：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span>(<span class="params">self, nums: List[int], target: int</span>) -&gt; int:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        ans = nums[<span class="number">0</span>] + nums[<span class="number">1</span>] + nums[<span class="number">2</span>]</span><br><span class="line">        <span class="comment"># 外层循环是用来判断第一个数的</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(nums)<span class="number">-2</span>):</span><br><span class="line">            l, r = i+<span class="number">1</span>, len(nums)<span class="number">-1</span></span><br><span class="line">            <span class="keyword">while</span> l&lt;r:</span><br><span class="line">                <span class="comment"># 内层循环去找另外两个数</span></span><br><span class="line">                cur = nums[i] + nums[l] + nums[r]</span><br><span class="line">                <span class="keyword">if</span> abs(cur-target)&lt;abs(ans-target):</span><br><span class="line">                    ans = cur</span><br><span class="line">                <span class="keyword">if</span> cur&lt;target:</span><br><span class="line">                    <span class="comment"># 当前的和比目标数小，说明l取小了，应该往右移</span></span><br><span class="line">                    l += <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> cur&gt;target:</span><br><span class="line">                    <span class="comment"># 反之，r指针左移</span></span><br><span class="line">                    r -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">return</span> ans</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-
-<p>排序的时间复杂度O(nlogn)，双指针扫描时间复杂度O(n²)</p>
-<h3 id="6-25"><a href="#6-25" class="headerlink" title="6.25"></a>6.25</h3><p><strong>每日一题</strong>：</p>
-<p>又是没能自己做出题的一天呢</p>
-<p>即使看出了是动态规划，想到转移方程，也解不出题</p>
-<p>最后还是看了评论和题解</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200625091931950.png" alt="单词拆分"></p>
-<blockquote>
-<p>优化前</p>
-<p>使用memos数组来存储字符串的0到 i-1 字串能否被拆分</p>
-<p>初始化memos数组第0个为true，其余为false</p>
-<p>用两层循环遍历字符串</p>
-<p>第一层循环是尾指针，从1到字符串末尾</p>
-<p>第二层循环是头指针，从0循环到 i 前面一位</p>
-<blockquote>
-<p>如果头指针 j 前面的字串可以被拆分（s[0:j]能被字典中的单词拆分，即memos[j] == True），且从头指针到尾指针的字符串在字典中，那么说明[0：i]字串能被拆分，所以memos[i]=True，break跳出循环，避免浪费时间</p>
-</blockquote>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wordBreak</span>(<span class="params">self, s: str, wordDict: List[str]</span>) -&gt; bool:</span></span><br><span class="line">        <span class="comment"># 动态规划</span></span><br><span class="line">        memos = [<span class="literal">False</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)+<span class="number">1</span>)]</span><br><span class="line">        memos[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="comment"># memos数组的第i项代表字符串的0到i-1字串能否被拆分为字典中的单词</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(s)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,i):</span><br><span class="line">                <span class="comment"># 判断[j:i]字串能否被拆分</span></span><br><span class="line">                <span class="keyword">if</span> memos[j] <span class="keyword">and</span> s[j:i] <span class="keyword">in</span> wordDict:</span><br><span class="line">                    memos[i] = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> memos[len(s)]</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>优化后</p>
-<p>内循环中判断 s[j:i] in wordDict 时，j是从开始循环的</p>
-<p>但是实际上不用从0，因为最大的单词的长度是固定的，如果从j-i&gt;最大单词长度，那么这个字串不可能在字典中出现</p>
-<p>所以将每次内层循环中j的初始位置变成i-maxWordLength（如果该值小于0，则初始值还是0）</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wordBreak</span>(<span class="params">self, s: str, wordDict: List[str]</span>) -&gt; bool:</span></span><br><span class="line">        <span class="comment"># 动态规划</span></span><br><span class="line">        memos = [<span class="literal">False</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)+<span class="number">1</span>)]</span><br><span class="line">        memos[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="comment"># memos数组的第i项代表字符串的0到i-1字串能否被拆分为字典中的单词</span></span><br><span class="line"></span><br><span class="line">        maxWordLength = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> wordDict:</span><br><span class="line">            maxWordLength = max(maxWordLength, len(i))</span><br><span class="line">        <span class="comment"># 找出字典中的单词的最大长度，减少循环次数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(s)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(max(<span class="number">0</span>, i-maxWordLength),i):</span><br><span class="line">                <span class="comment"># 判断[j:i]字串能否被拆分 j从存在的最大单词长度开始</span></span><br><span class="line">                <span class="keyword">if</span> memos[j] <span class="keyword">and</span> s[j:i] <span class="keyword">in</span> wordDict:</span><br><span class="line">                    memos[i] = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> memos[len(s)]</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-26"><a href="#6-26" class="headerlink" title="6.26"></a>6.26</h3><p>今天要考计算机硬件，好紧张好紧张</p>
-<p>今天leetcode给面子出了道简单题，赶紧做到题放松一下</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200626091134446.png" alt="6.26每日一题"></p>
-<p>题目很简单 链表去重</p>
-<p>方法1：</p>
-<p>解题思路是遍历一遍链表，把第一次出现地结点的值有序地保存在一个列表之中</p>
-<p>同时用集合去做判重的工作</p>
-<p>最后把这个列表里的值初始化为一个链表</p>
-<p>返回头结点</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicateNodes</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 集合用于去重</span></span><br><span class="line">        <span class="comment"># 如果直接用 head not in nodes 去做判断条件 会浪费很多时间</span></span><br><span class="line">        <span class="comment"># set判重:88ms</span></span><br><span class="line">        <span class="comment"># list判重:2256ms</span></span><br><span class="line">        num_set = set()</span><br><span class="line">        <span class="comment"># nodes列表用于暂存所有的结点值</span></span><br><span class="line">        nodes = []</span><br><span class="line">        <span class="comment"># 判断头结点是否为空 避免空指针问题</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head: <span class="keyword">return</span> head</span><br><span class="line">        <span class="comment"># 一次遍历链表 把所有第一次出现的数加入到nodes中</span></span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">if</span> head.val <span class="keyword">not</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                num_set.add(head.val)</span><br><span class="line">                nodes.append(head.val)</span><br><span class="line">            head = head.next</span><br><span class="line">        <span class="comment"># 初始化返回链表的头结点</span></span><br><span class="line">        head0 = ListNode(nodes[<span class="number">0</span>])</span><br><span class="line">        node = head0</span><br><span class="line">        <span class="comment"># 遍历nodes列表，把所有值初始化为一个结点</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(nodes)):</span><br><span class="line">            cur = ListNode(nodes[i])</span><br><span class="line">            node.next = cur</span><br><span class="line">            node = cur</span><br><span class="line">        <span class="keyword">return</span> head0           </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200626091431598.png" alt="通过结果"></p>
-<p>可以看到用集合判重比用列表判重会快很多很多</p>
-<p>究其原因，python中set底层用的是hash表，list用的是数组，所以判重的速度前者是O(1)，后者是O(n)，当然执行时间会差很多啦。</p>
-<p>方法2：</p>
-<p>使用集合判重</p>
-<p>链表中原地删除重复结点 不另外构造数组</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicateNodes</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 集合用于去重</span></span><br><span class="line">        num_set = set()</span><br><span class="line">        <span class="comment"># 判断头结点是否为空 避免空指针问题</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head: <span class="keyword">return</span> head</span><br><span class="line">        node = head</span><br><span class="line">        <span class="comment"># 因为遍历是用head.next开始的，所以要在第一次循环前手动把head的val加到set中</span></span><br><span class="line">        num_set.add(node.val)</span><br><span class="line">        <span class="keyword">while</span> node <span class="keyword">and</span> node.next:</span><br><span class="line">            nxt = node.next</span><br><span class="line">            <span class="keyword">if</span> nxt.val <span class="keyword">not</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                <span class="comment"># 值不在集合中，就把值加到集合中，然后指针往后移</span></span><br><span class="line">                num_set.add(nxt.val)</span><br><span class="line">                node = node.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 值在集合中，把当前结点的next指针替换成下一个结点的next指针</span></span><br><span class="line">                <span class="comment"># 即实现了删除下一个节点</span></span><br><span class="line">                node.next = nxt.next</span><br><span class="line">        <span class="keyword">return</span> head</span><br></pre></td></tr></table></figure>
-
-<p>最终时间和方法1也差不多</p>
-<h3 id="6-27"><a href="#6-27" class="headerlink" title="6.27"></a>6.27</h3><p>昨天计算机硬件考完有点难受，老师出的都是良心题，但是还是做错了</p>
-<p>今天leetcode又来一道困难题 备受折磨</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200627092131117.png" alt="缺失的第一个正数"></p>
-<p>提示要求时间复杂度O(N)， 那首先就排除了排序。</p>
-<p>O(N)意味着不能循环套循环，那么肯定是用哈希表记录元素出现与否</p>
-<p>但是哈希表的空间复杂度是O(N)，这和题目要求的O(1)又不一样</p>
-<p>我真是想了很久也没想出来，最终还是看了题解</p>
-<p>下面总结一下我的理解</p>
-<ol>
-<li><p>首先要知道最后的答案一定是[1,N+1]中间一个数(N为数组长度），在这个前提下，我们才能把nums这个数组作为哈希表存储。</p>
-</li>
-<li><p>同时为了避免负数和0对我建立哈希表的过程产生影响，先统一把他们变成一个对我没有影响的数。这里就设置为N+1，之所以N+1没影响是因为最后如果返回的值是N+1，不是通过哈希表直接判断的，是通过判断出[1,N]之间的数字都出现了，才能返回N+1。</p>
-</li>
-<li><p>打标记。遍历数组，一般情况下，假设我碰到了一个3（数组长度大于3），那么说明我要在nums数组中通过某种方法记录下来3已经出现过了。这里我们选择把nums[3-1]标记成负数，也就是数组出现的第3个数标记为负数。那么这里还有另外两种情况。</p>
-<ol>
-<li>遍历到一个-5，说明这个数已经被打上了标记，但是5也在[1,N]之间，所以我们应该取-5的绝对值把nums[5-1]打上标记。</li>
-<li>遍历到一个999，超过了数组长度N，那么就不用打标记，因为超出了数组长度无法记录，而且这个999也绝对不可能是答案，所以没有必要处理它。</li>
-</ol>
-<blockquote>
-<p>这个时候，nums数组就相当于一个记录数字是否出现过的哈希表，nums[i]如果是正数，那么i+1这个数字肯定就没有出现过，nums[i]如果为负数，那么i+1这个数字肯定出现过</p>
-</blockquote>
-</li>
-<li><p>再次遍历数组，遇到的第一个大于0的nums[i]，返回i+1，因为是从i=0开始遍历，所以能保证返回的值一定是最小的正数。如果nums中没有正数，就返回N+1。</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">firstMissingPositive</span>(<span class="params">self, nums: List[int]</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 数组原地建立哈希表</span></span><br><span class="line">        N = len(nums)</span><br><span class="line">        <span class="comment"># 1. 将所有负数和0改成N+1（N为数组长度）</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&lt;=<span class="number">0</span>:</span><br><span class="line">                nums[i] = N+<span class="number">1</span></span><br><span class="line">        <span class="comment"># 2. 遍历数组，如果nums[i]在[1,N]之间，就把nums[nums[i] - 1]标记成负数</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            k = abs(i)</span><br><span class="line">            <span class="keyword">if</span> <span class="number">1</span>&lt;=k&lt;=N:</span><br><span class="line">                nums[k<span class="number">-1</span>] = -abs(nums[k<span class="number">-1</span>])</span><br><span class="line">        <span class="comment"># 3. 再次遍历数组，第一个遍历到的正数nums[i]，返回i+1，如果没有正数，返回N+1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&gt;<span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> i+<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> N+<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="6-28"><a href="#6-28" class="headerlink" title="6.28"></a>6.28</h3><p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628085932535.png" alt="长度最小的子数组"></p>
-<p>看题目说明，本以为用前缀数组和时间复杂度为O(n²)可以勉强通过，没想到直接超时</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628090120199.png" alt="1年前我竟然还会做"></p>
-<p>不过超时也可能是python的锅</p>
-<p>思路就是用前缀和数组数组存储nums从0到i的和</p>
-<p>然后[i:j]子数组的和就是前缀和数组的第j项-第i项</p>
-<p>以此来节省用sum方法求和的时间</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minSubArrayLen</span>(<span class="params">self, s: int, nums: List[int]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> sum(nums)&lt;s <span class="keyword">or</span> len(nums)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="comment"># 先求前缀和数组</span></span><br><span class="line">        pre_sum = [<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(nums)):</span><br><span class="line">            pre_sum.append(pre_sum[<span class="number">-1</span>]+nums[i])</span><br><span class="line">        <span class="comment"># pre_sum[i]代表着nums的前i个数的和</span></span><br><span class="line">        ans = len(nums)</span><br><span class="line">        n = len(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> pre_sum[j]-pre_sum[i]&gt;=s:</span><br><span class="line">                    ans = min(ans, j-i)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-
-<p>用java重写了一遍果然勉强能通过</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628091758084.png"></p>
-<p>当然进阶方法就是换成滑动窗口的方法</p>
-<p>用双指针去判断数组和，比直接套两重循环节省掉浪费的时间</p>
-<p>一边循环一边求和</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minSubArrayLen</span>(<span class="params">self, s: int, nums: List[int]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> sum(nums)&lt;s:<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        left, right, tot = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        n = len(nums)</span><br><span class="line">        ans = n</span><br><span class="line">        <span class="keyword">while</span> right&lt;n:</span><br><span class="line">            <span class="keyword">while</span> right&lt;n <span class="keyword">and</span> tot&lt;s:</span><br><span class="line">                tot += nums[right]</span><br><span class="line">                right += <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left&lt;n <span class="keyword">and</span> tot&gt;=s:</span><br><span class="line">                ans = min(ans, right-left)</span><br><span class="line">                tot -= nums[left]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-
-<p>时间复杂度O(nlogn)</p>
-<h3 id="6-29"><a href="#6-29" class="headerlink" title="6.29"></a>6.29</h3><p>今天早上考了英语，晚上才有时间刷题</p>
-<p>今天的又是一道老题。</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629203510762.png" alt="数组中的第K个最大元素"></p>
-<p>先偷个懒</p>
-<p>直接用python自带的排序把nums数组排个序，然后返回数组的倒数第K个</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        <span class="keyword">return</span> nums[-k]</span><br></pre></td></tr></table></figure>
-
-<p>不出意外，这种耍流氓的方法就是快</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629203719100.png" alt="执行结果"></p>
-<p>那么现在问题来了，如果不用排序该怎么实现呢</p>
-<ul>
-<li>维护一个递减栈</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        stk = []</span><br><span class="line">        <span class="comment"># 维护一个递减栈，栈的最大容量为k</span></span><br><span class="line">        <span class="comment"># 栈的最底下塞最大的数，越靠近top越小</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> stk:</span><br><span class="line">                <span class="comment"># 当栈为空，直接把数压进去</span></span><br><span class="line">                stk.append(i)</span><br><span class="line">            <span class="keyword">elif</span> i&lt;stk[<span class="number">-1</span>] <span class="keyword">and</span> len(stk)==k:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 栈非空，就去栈中找到i应该待的位置</span></span><br><span class="line">                <span class="comment"># 把比i小的先全pop出</span></span><br><span class="line">                <span class="comment"># 直到栈顶元素比i大 这个时候把i压入 同时把刚刚pop出来的数再push回去</span></span><br><span class="line">                tmp = []</span><br><span class="line">                <span class="comment"># 要注意pop时，栈是否已经空了</span></span><br><span class="line">                <span class="keyword">while</span> len(stk)&gt;<span class="number">0</span> <span class="keyword">and</span> stk[<span class="number">-1</span>]&lt;i:</span><br><span class="line">                    tmp.append(stk.pop())</span><br><span class="line">                stk.append(i)</span><br><span class="line">                <span class="comment"># 确保栈的长度不超过k</span></span><br><span class="line">                <span class="keyword">while</span> len(stk)&lt;k <span class="keyword">and</span> len(tmp)&gt;<span class="number">0</span>:</span><br><span class="line">                    stk.append(tmp.pop())</span><br><span class="line">        <span class="keyword">return</span> stk[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-
-<p>时间复杂度O(n²)，说实话我以为是会报超时错误的</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629211234594.png" alt="递减栈"></p>
-<ul>
-<li>快速排序的选择方法</li>
-</ul>
-<p>在快排中，使用的是分治的思想，在每一次为了实现排序的过程之中，每次递归的小任务是</p>
-<ul>
-<li>首先在数组的[left,right]区域中确定一个pivot（支点）</li>
-<li>通过交换的方法，把比pivot小的数换到pivot的左边，比pivot大的数换到pivot的右边</li>
-<li>最终实现pivot的位置就是最终排序完数组的位置</li>
-<li>接着再对[left，pivot的左边],[pivot的右边,right]这两段数组分别继续上述操作</li>
-</ul>
-<p>这里题目要求找到第k大的数字，也就是找到排序之后倒数第k个数</p>
-<p>其实数组本身不需要排序，只需要使用上述快排的思想，去找到这个最终处于倒数第k个位置的pivot即可</p>
-<p>那么一开始我们的left=0,right=len(nums)-1，</p>
-<p>第一次会返回pivot的最终位置index，与len(nums)-k比较，有三种情况</p>
-<ul>
-<li>相等，那就是我们要找的数返回nums[index]即可</li>
-<li>index&lt;len(nums)-k，说明这个pivot在我们要找的数的左边，那就继续在[index+1,right]这个区间找</li>
-<li>index&gt;len(nums)-k，说明这个pivot在我们要找的数的右边，那就继续在[left,index-1]这个区间找</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 使用快速排序的思想</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">nums, left, right</span>):</span></span><br><span class="line">            <span class="comment"># 这个函数作用是找到nums[left]在数组中应该处于的位置</span></span><br><span class="line">            <span class="comment"># 把所有比他小的数都移到他左边 比他大的数都在他的右边</span></span><br><span class="line">            pivot = nums[left]</span><br><span class="line">            j = left</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(left+<span class="number">1</span>,right+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> nums[i]&lt;pivot:</span><br><span class="line">                    <span class="comment"># 把所有小于pivot的元素全放到前面</span></span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                    nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line">            nums[left], nums[j] = nums[j], nums[left]</span><br><span class="line">            <span class="keyword">return</span> j</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(nums)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            index = partition(nums, left, right)</span><br><span class="line">            <span class="keyword">if</span> index==len(nums)-k:</span><br><span class="line">                <span class="keyword">return</span> nums[index]</span><br><span class="line">            <span class="keyword">elif</span> index&lt;len(nums)-k:</span><br><span class="line">                left = index+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = index<span class="number">-1</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629215451981.png" alt="快速排序的选择方法"></p>
-<p>上面那个方法在极端的测试(数组已经是倒序或者正序)用例会导致时间复杂度为O(n²)</p>
-<p>可以对pivot的选择位置进行优化，减少在极端情况的时间</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 使用快速排序的思想</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">nums, left, right</span>):</span></span><br><span class="line">            <span class="comment"># 这个函数作用是找到nums[left]在数组中应该处于的位置</span></span><br><span class="line">            <span class="comment"># 把所有比他小的数都移到他左边 比他大的数都在他的右边</span></span><br><span class="line">            ind = random.randint(left,right)</span><br><span class="line">            nums[ind], nums[left]=nums[left], nums[ind]</span><br><span class="line">            pivot = nums[ind]</span><br><span class="line">            j = left</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(left+<span class="number">1</span>,right+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> nums[i]&lt;pivot:</span><br><span class="line">                    <span class="comment"># 把所有小于pivot的元素全放到前面</span></span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                    nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line">            nums[left], nums[j] = nums[j], nums[left]</span><br><span class="line">            <span class="keyword">return</span> j</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(nums)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            index = partition(nums, left, right)</span><br><span class="line">            <span class="keyword">if</span> index==len(nums)-k:</span><br><span class="line">                <span class="keyword">return</span> nums[index]</span><br><span class="line">            <span class="keyword">elif</span> index&lt;len(nums)-k:</span><br><span class="line">                left = index+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = index<span class="number">-1</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630083526365.png"></p>
-<p>可以看到随机选取的方法在有的时候确实能起到优化算法的作用</p>
-<p>当然由于这道是所谓的经典面试题，我们得尽量把官方题解提供的方法都学会</p>
-<p>除去偷懒用库函数的方法和用快排思想的选择方法，还有一种利用推排序的选择的方法</p>
-<p>去年数据结构课上是学过堆排序的，但是问题在于当时老师只需要我们理解画图，没要求我们用代码去实现 </p>
-<p>少壮不努力，老大徒伤悲，只能现在再从头学啦</p>
-<p>官方的ppt非常形象，简单来说堆排序就是建一个二叉树，然后不断地调整和删除的过程</p>
-<ul>
-<li>第一步：建堆</li>
-</ul>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/1.png" alt="建堆"></p>
-<ul>
-<li>第二步：调整。通过交换非叶子节点和子节点的值，来获取一个大根堆（所有的父结点都大于自己的两个子节点）</li>
-</ul>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/7.png" alt="img"></p>
-<ul>
-<li>第三步：删除。大根堆的含义就是最大的结点在根部。既然这个时候我们知道了最大的数的值(root.val)，那么根节点对我们来说就没有意义了，因为我们想要找的是第k大的数，直接把根节点删掉。这个时候把最后一个结点1先挪到根节点的位置，然后再对整棵树进行调整，按上一步的方法调整为大根堆。</li>
-<li>由此循环，直到删除了k-1次最大元素值后，最后调整一次大根堆，这时根节点的值就是我们要找的整个数组中第k大的值</li>
-</ul>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/8.png" alt="img"></p>
-<p>用java写是因为在写比较复杂的数据结构时候习惯了java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findKthLargest</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> heapSize = nums.length;</span><br><span class="line">        buildMaxHeap(nums, heapSize);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = nums.length-<span class="number">1</span>;i&gt;=nums.length-k+<span class="number">1</span>;i--)&#123;</span><br><span class="line">            <span class="comment">// 每次循环把最后一个结点的值调到根节点上</span></span><br><span class="line">            swap(nums, <span class="number">0</span>, i);</span><br><span class="line">            heapSize--;</span><br><span class="line">            maxHeapify(nums, <span class="number">0</span>, heapSize);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">buildMaxHeap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> heapSize)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 自下向上建大根堆</span></span><br><span class="line">        <span class="comment">// 从最后一棵子树的根节点开始调整</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = heapSize/<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            maxHeapify(a, i, heapSize);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">maxHeapify</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> heapSize)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 因为是完全二叉树，所以对于结点i来说，它的左右结点的位置可以直接用i表示出来</span></span><br><span class="line">        <span class="keyword">int</span> l = i*<span class="number">2</span> + <span class="number">1</span>, r =i*<span class="number">2</span> +<span class="number">2</span>, largest = i;</span><br><span class="line">        <span class="comment">// 找到结点和它的两个子节点的值的最大值</span></span><br><span class="line">        <span class="keyword">if</span> (l&lt;heapSize &amp;&amp; a[l] &gt; a[largest])&#123;</span><br><span class="line">            largest = l;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (r&lt;heapSize &amp;&amp; a[r] &gt; a[largest])&#123;</span><br><span class="line">            largest = r;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (largest != i)&#123;</span><br><span class="line">            <span class="comment">// 当该结点的子节点有更大的值的时候需要交换</span></span><br><span class="line">            swap(a, i, largest);</span><br><span class="line">            <span class="comment">// 同时由于子结点的值变了，那么还需要继续调整子树</span></span><br><span class="line">            maxHeapify(a, largest, heapSize);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630090913150.png" alt="不愧是你java.jpg"></p>
-<h3 id="6-30"><a href="#6-30" class="headerlink" title="6.30"></a>6.30</h3><p>6月的最后一天了呀</p>
-<p>继续加油吧</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092203580.png" alt="嗷嗷嗷"></p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092258740.png" alt="两个栈实现队列"></p>
-<p>因为是简单题，就先随性写了一个方法，题目都告诉了方法，其实还是很简单的</p>
-<ul>
-<li><p>入队：用stk1去存储数据</p>
-</li>
-<li><p>出队：因为stk1是按栈的顺序存的数据，所以在模拟队列出队时，队首元素是放在栈底的</p>
-</li>
-<li><p>这个时候就用stk2先把stk1的所有数据倒进去，一个pop，一个push（有、、恶心）</p>
-</li>
-<li><p>把stk1倒空之后，stk2的栈顶元素就是队首元素了，把它的值先pop出去，放到临时变量val里</p>
-</li>
-<li><p>再把stk2中剩余所有数据倒回stk1中</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CQueue</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; stk1;</span><br><span class="line">    Stack&lt;Integer&gt; stk2;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.stk1 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">this</span>.stk2 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">appendTail</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        stk1.push(value);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteHead</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (stk1.empty())&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!stk1.empty())&#123;</span><br><span class="line">            stk2.push(stk1.pop());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> val = stk2.pop();</span><br><span class="line">        <span class="keyword">while</span>(!stk2.empty())&#123;</span><br><span class="line">            stk1.push(stk2.pop());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>随便写的东西果然时间复杂度就是丑陋。</p>
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092829718.png"></p>
-<p>参考了官方题解和评论区之后的优化版</p>
-<ul>
-<li>实际上在删除队首元素时，不需要保证元素一直在stk1中</li>
-<li>只要保证stk2的元素是队列前面的那些元素，它的元素顺序是按照队列来的</li>
-<li>stk1只要负责向stk2传递数据</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CQueue</span> </span>&#123;</span><br><span class="line">    Deque&lt;Integer&gt; stk1;</span><br><span class="line">    Deque&lt;Integer&gt; stk2;</span><br><span class="line">    <span class="keyword">int</span> size;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.stk1 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">this</span>.stk2 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">this</span>.size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">appendTail</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        stk1.push(value);</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteHead</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(size ==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(stk2.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">while</span>(!stk1.isEmpty())&#123;</span><br><span class="line">                stk2.push(stk1.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">return</span> stk2.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630094839703.png"></p>
-<h2 id="七月再见啦"><a href="#七月再见啦" class="headerlink" title="七月再见啦"></a>七月再见啦</h2><p> :@(坐等) </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -494,10 +184,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">数据库课程笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          数据库课程笔记
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -536,7 +225,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="数据库原理与设计期末复习"><a href="#数据库原理与设计期末复习" class="headerlink" title="数据库原理与设计期末复习"></a>数据库原理与设计期末复习</h1><p><code>基于MOOC课程https://www.icourse163.org/learn/RUC-1001655006?tid=1450237476</code></p>
+        <h1 id="数据库原理与设计期末复习"><a href="#数据库原理与设计期末复习" class="headerlink" title="数据库原理与设计期末复习"></a>数据库原理与设计期末复习</h1><p><code>基于MOOC课程https://www.icourse163.org/learn/RUC-1001655006?tid=1450237476</code></p>
 <h2 id="第六章-关系数据理论"><a href="#第六章-关系数据理论" class="headerlink" title="第六章 关系数据理论"></a>第六章 关系数据理论</h2><h3 id="关系模式-STUDENT（Sno-Sdept-Mname-Cno-Grade）中存在的问题"><a href="#关系模式-STUDENT（Sno-Sdept-Mname-Cno-Grade）中存在的问题" class="headerlink" title="关系模式 STUDENT（Sno, Sdept, Mname, Cno, Grade）中存在的问题"></a>关系模式 STUDENT（Sno, Sdept, Mname, Cno, Grade）中存在的问题</h3><ol>
 <li>数据冗余度太大，浪费存储空间。<code>如系主任的名字Mname重复出现，其重复的次数与该系所有学生的所有课程成绩出现次数相同</code></li>
 <li>更新异常。<code>数据冗余，更新数据时维护数据完整性代价大。如果更换系主任，系统必须修改所有与该系学生有关的每一个元组。</code></li>
@@ -2977,21 +2666,33 @@
 <li>在实际的数据库管理系统产品中得到广泛应用</li>
 </ul>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/mysql/" rel="tag"># mysql</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/24/2020%E5%B9%B46%E6%9C%88%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/" rel="next" title="2020年6月刷题日志">
+      2020年6月刷题日志 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -3044,6 +2745,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">数据库原理与设计期末复习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA"><span class="nav-number">1.1.</span> <span class="nav-text">第六章 关系数据理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F-STUDENT%EF%BC%88Sno-Sdept-Mname-Cno-Grade%EF%BC%89%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">关系模式 STUDENT（Sno, Sdept, Mname, Cno, Grade）中存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">什么是一个好的模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.3.</span> <span class="nav-text">什么是数据依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">完整性约束的一种表现形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">数据依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BE%9D%E8%B5%96%E7%9A%84%E4%B8%BB%E8%A6%81%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">数据依赖的主要类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BE%9D%E8%B5%96%E5%AF%B9%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">数据依赖对关系模式的影响</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.4.</span> <span class="nav-text">关系模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8C%96%E5%AE%9A%E4%B9%89R-U-D-DOM-F"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">关系模式的形式化定义R(U, D, DOM, F)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%AE%80%E5%8C%96%E8%A1%A8%E7%A4%BAR-lt-U-F-gt"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">关系模式的简化表示R&lt;U, F&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">如何解决关系模式中存在的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.5.</span> <span class="nav-text">函数依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">函数依赖定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">如何确定函数依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B3%E5%87%A1%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.5.3.</span> <span class="nav-text">平凡函数依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96%E4%B8%8E%E9%83%A8%E5%88%86%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.5.4.</span> <span class="nav-text">完全函数依赖与部分函数依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.5.5.</span> <span class="nav-text">传递函数依赖</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%81"><span class="nav-number">1.1.6.</span> <span class="nav-text">码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E5%B1%9E%E6%80%A7%E4%B8%8E%E9%9D%9E%E4%B8%BB%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">主属性与非主属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E7%A0%81"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">全码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E7%A0%81"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">外部码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8C%83%E5%BC%8F"><span class="nav-number">1.1.7.</span> <span class="nav-text">范式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1NF"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">1NF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2NF"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">2NF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3NF"><span class="nav-number">1.1.7.3.</span> <span class="nav-text">3NF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3NF-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.7.4.</span> <span class="nav-text">3NF 的一些性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BCNF"><span class="nav-number">1.1.7.5.</span> <span class="nav-text">BCNF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BCNF-%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.7.6.</span> <span class="nav-text">BCNF 的性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E8%8C%83%E5%8C%96%E5%B0%8F%E7%BB%93"><span class="nav-number">1.1.8.</span> <span class="nav-text">规范化小结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E8%A7%84%E8%8C%83%E5%8C%96%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">关系模式规范化的基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E8%8C%83%E5%8C%96%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">规范化的基本思想</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BE%9D%E8%B5%96%E7%9A%84%E5%85%AC%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.9.</span> <span class="nav-text">数据依赖的公理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%95%B4%E5%90%AB"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">逻辑蕴含</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Armstrong-%E5%85%AC%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">Armstrong 公理系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96%E9%97%AD%E5%8C%85"><span class="nav-number">1.1.9.3.</span> <span class="nav-text">函数依赖闭包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%82%E5%B1%9E%E6%80%A7%E9%9B%86-X-%E5%85%B3%E4%BA%8E-F-%E7%9A%84%E9%97%AD%E5%8C%85-XF"><span class="nav-number">1.1.9.4.</span> <span class="nav-text">求属性集 X 关于 F 的闭包 XF+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Armstrong-%E5%85%AC%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E4%B8%8E%E5%AE%8C%E5%A4%87%E6%80%A7"><span class="nav-number">1.1.9.5.</span> <span class="nav-text">Armstrong 公理系统的有效性与完备性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96%E9%9B%86%E7%AD%89%E4%BB%B7%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.9.6.</span> <span class="nav-text">函数依赖集等价的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E4%BE%9D%E8%B5%96%E9%9B%86"><span class="nav-number">1.1.9.7.</span> <span class="nav-text">最小依赖集</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="nav-number">1.1.10.</span> <span class="nav-text">模式分解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B7%E6%9C%89%E6%97%A0%E6%8D%9F%E8%BF%9E%E6%8E%A5%E6%80%A7%E7%9A%84%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="nav-number">1.1.10.1.</span> <span class="nav-text">具有无损连接性的模式分解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E6%8C%81%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96%E7%9A%84%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3"><span class="nav-number">1.1.10.2.</span> <span class="nav-text">保持函数依赖的模式分解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E8%A7%A3%E7%9A%84%E6%97%A0%E6%8D%9F%E8%BF%9E%E6%8E%A5%E6%80%A7%E5%92%8C%E4%BF%9D%E6%8C%81%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96%E6%80%A7"><span class="nav-number">1.1.10.3.</span> <span class="nav-text">分解的无损连接性和保持函数依赖性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">数据库设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E7%89%B9%E7%82%B9"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">数据库设计特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">数据库设计方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">数据库设计的基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%BA%BA%E5%91%98"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">参与数据库设计的人员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%90%84%E7%BA%A7%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">数据库设计过程中的各级模式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-number">1.2.2.</span> <span class="nav-text">需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">需求分析的任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">需求分析的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">数据字典</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%A1%B9"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">数据项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">数据流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">数据存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">处理过程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">概念模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E4%B8%96%E7%95%8C%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">信息世界中的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">概念结构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9E%E4%BD%93%E4%B8%8E%E5%B1%9E%E6%80%A7%E7%9A%84%E5%88%92%E5%88%86%E5%8E%9F%E5%88%99"><span class="nav-number">1.2.3.2.1.</span> <span class="nav-text">实体与属性的划分原则</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-R-%E5%9B%BE%E7%9A%84%E9%9B%86%E6%88%90"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">E-R 图的集成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.4.</span> <span class="nav-text">逻辑结构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#E-R-%E5%9B%BE%E5%90%91%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">E-R 图向关系模式的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">数据模型的优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E7%94%A8%E6%88%B7%E5%AD%90%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">设计用户子模式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.5.</span> <span class="nav-text">物理结构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%89%A9%E7%90%86%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%85%E5%AE%B9%E5%92%8C%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">数据库物理设计的内容和方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AD%98%E5%8F%96%E6%96%B9%E6%B3%95%E9%80%89%E6%8B%A9"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">关系模式的存取方法选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.5.2.1.</span> <span class="nav-text">索引方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%81%9A%E7%B0%87%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">1.2.5.2.2.</span> <span class="nav-text">聚簇方法的选择</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">确定数据库的存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%84%E4%BB%B7%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.5.4.</span> <span class="nav-text">评价物理结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%89%A9%E7%90%86%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.2.5.5.</span> <span class="nav-text">数据库物理设计的步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%9E%E6%96%BD%E5%92%8C%E7%BB%B4%E6%8A%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">数据库的实施和维护</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BD%BD%E5%85%A5%E5%92%8C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B0%83%E8%AF%95"><span class="nav-number">1.2.6.1.</span> <span class="nav-text">数据的载入和应用程序的调试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AF%95%E8%BF%90%E8%A1%8C"><span class="nav-number">1.2.6.2.</span> <span class="nav-text">数据库的试运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%90%E8%A1%8C%E5%92%8C%E7%BB%B4%E6%8A%A4"><span class="nav-number">1.2.6.3.</span> <span class="nav-text">数据库的运行和维护</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86%E5%92%8C%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text">第九章 关系查询处理和查询优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%88%86%E6%9E%90"><span class="nav-number">1.3.1.</span> <span class="nav-text">查询分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%A3%80%E6%9F%A5"><span class="nav-number">1.3.2.</span> <span class="nav-text">查询检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.3.</span> <span class="nav-text">查询优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%89%A7%E8%A1%8C"><span class="nav-number">1.3.4.</span> <span class="nav-text">查询执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%AE%97%E5%AD%90%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.5.</span> <span class="nav-text">关系算子的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%93%8D%E4%BD%9C%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">选择操作的实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%93%8D%E4%BD%9C%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">连接操作的实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.3.5.3.</span> <span class="nav-text">查询优化的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.5.4.</span> <span class="nav-text">代数优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E8%A7%84%E5%88%99"><span class="nav-number">1.3.5.5.</span> <span class="nav-text">典型的启发式规则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.6.</span> <span class="nav-text">物理优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%90%AF%E5%8F%91%E5%BC%8F%E8%A7%84%E5%88%99%E5%9C%B0%E5%AD%98%E5%8F%96%E8%B7%AF%E5%BE%84%E9%80%89%E6%8B%A9%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">基于启发式规则地存取路径选择优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E4%BB%A3%E4%BB%B7%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">基于代价的优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF"><span class="nav-number">1.4.</span> <span class="nav-text">数据库恢复技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1"><span class="nav-number">1.4.1.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E7%89%A9%E7%9A%84%E7%89%B9%E6%80%A7-ADID-%E7%89%B9%E6%80%A7"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">事物的特性(ADID 特性)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%A6%82%E8%BF%B0"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">数据库恢复概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">故障种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E5%B0%8F%E7%BB%93"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">故障小结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%8A%80%E6%9C%AF"><span class="nav-number">1.4.2.</span> <span class="nav-text">恢复的实现技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BD%AC%E5%82%A8"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">数据转储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AC%E5%82%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">转储方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%B7%E9%87%8F%E8%BD%AC%E5%82%A8%E4%B8%8E%E5%A2%9E%E9%87%8F%E8%BD%AC%E5%82%A8"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">海量转储与增量转储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BB%E8%AE%B0%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6"><span class="nav-number">1.4.2.4.</span> <span class="nav-text">登记日志文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E7%AD%96%E7%95%A5"><span class="nav-number">1.4.3.</span> <span class="nav-text">恢复策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1%E6%95%85%E9%9A%9C%E7%9A%84%E6%81%A2%E5%A4%8D"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">事务故障的恢复</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C%E7%9A%84%E6%81%A2%E5%A4%8D"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">系统故障的恢复</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8B%E8%B4%A8%E6%95%85%E9%9A%9C%E7%9A%84%E6%81%A2%E5%A4%8D"><span class="nav-number">1.4.3.3.</span> <span class="nav-text">介质故障的恢复</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E6%9C%89%E6%A3%80%E6%9F%A5%E7%82%B9%E7%9A%84%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF"><span class="nav-number">1.4.4.</span> <span class="nav-text">具有检查点的恢复技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E7%82%B9%E6%8A%80%E6%9C%AF"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">检查点技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%A3%80%E6%9F%A5%E7%82%B9%E7%9A%84%E6%81%A2%E5%A4%8D%E7%AD%96%E7%95%A5"><span class="nav-number">1.4.4.2.</span> <span class="nav-text">使用检查点的恢复策略</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E9%95%9C%E5%83%8F"><span class="nav-number">1.4.5.</span> <span class="nav-text">数据库镜像</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E9%95%9C%E5%83%8F%EF%BC%88Mirror%EF%BC%89"><span class="nav-number">1.4.5.1.</span> <span class="nav-text">数据库镜像（Mirror）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6"><span class="nav-number">1.5.</span> <span class="nav-text">并发控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E6%A6%82%E8%BF%B0"><span class="nav-number">1.5.1.</span> <span class="nav-text">并发控制概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E9%94%81"><span class="nav-number">1.5.2.</span> <span class="nav-text">封锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E9%94%81%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.5.3.</span> <span class="nav-text">封锁协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%BB%E9%94%81%E5%92%8C%E6%AD%BB%E9%94%81"><span class="nav-number">1.5.4.</span> <span class="nav-text">活锁和死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">1.5.4.1.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%BB%E9%94%81%E7%9A%84%E8%AF%8A%E6%96%AD%E5%92%8C%E8%A7%A3%E9%99%A4"><span class="nav-number">1.5.4.2.</span> <span class="nav-text">死锁的诊断和解除</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E8%B0%83%E5%BA%A6%E7%9A%84%E5%8F%AF%E4%B8%B2%E8%A1%8C%E6%80%A7"><span class="nav-number">1.5.5.</span> <span class="nav-text">并发调度的可串行性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E4%B8%B2%E8%A1%8C%E5%8C%96%E8%B0%83%E5%BA%A6"><span class="nav-number">1.5.5.1.</span> <span class="nav-text">可串行化调度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E4%B8%B2%E8%A1%8C%E6%80%A7"><span class="nav-number">1.5.5.2.</span> <span class="nav-text">可串行性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E5%8F%AF%E4%B8%B2%E8%A1%8C%E5%8C%96%E8%B0%83%E5%BA%A6"><span class="nav-number">1.5.5.3.</span> <span class="nav-text">冲突可串行化调度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E6%AE%B5%E9%94%81%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.5.6.</span> <span class="nav-text">两段锁协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E9%94%81%E7%B2%92%E5%BA%A6"><span class="nav-number">1.5.7.</span> <span class="nav-text">封锁粒度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E7%B2%92%E5%BA%A6%E5%B0%81%E9%94%81"><span class="nav-number">1.5.7.1.</span> <span class="nav-text">多粒度封锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%84%8F%E5%90%91%E9%94%81"><span class="nav-number">1.5.7.2.</span> <span class="nav-text">意向锁</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

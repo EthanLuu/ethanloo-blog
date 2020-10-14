@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.ethanloo.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Leetcode 刷题日志就从今天（6.24）开始记录自己的刷题情况吧 日志说明：文笔很差，想到什么写什么，缺乏逻辑 把解题思路记下来，顺便督促一下自己不要无脑抄题解 不知道能坚持多久，希望会够久  2020.66.24今天正好是重回leetcode刷题满一个月，就从今天开始记录自己的刷题实况吧 上次规律的刷题还是在大一上学期学Python的时候，没想到现在已经是大二期末了。 刷算法题的感觉让我又">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年6月刷题日志">
+<meta property="og:url" content="https://www.ethanloo.top/2020/06/24/2020%E5%B9%B46%E6%9C%88%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Leetcode 刷题日志就从今天（6.24）开始记录自己的刷题情况吧 日志说明：文笔很差，想到什么写什么，缺乏逻辑 把解题思路记下来，顺便督促一下自己不要无脑抄题解 不知道能坚持多久，希望会够久  2020.66.24今天正好是重回leetcode刷题满一个月，就从今天开始记录自己的刷题实况吧 上次规律的刷题还是在大一上学期学Python的时候，没想到现在已经是大二期末了。 刷算法题的感觉让我又">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624085941874.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624090225796.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624090745330.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200625091931950.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200626091134446.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200626091431598.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200627092131117.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628085932535.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628090120199.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628091758084.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629203510762.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629203719100.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629211234594.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629215451981.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630083526365.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/1.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/7.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/8.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630090913150.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092203580.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092258740.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092829718.png">
+<meta property="og:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630094839703.png">
+<meta property="article:published_time" content="2020-06-24T01:59:00.000Z">
+<meta property="article:modified_time" content="2020-10-14T08:15:44.976Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="leetcode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624085941874.png">
+
+<link rel="canonical" href="https://www.ethanloo.top/2020/06/24/2020%E5%B9%B46%E6%9C%88%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>2020年6月刷题日志 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://www.ethanloo.top/2020/06/24/2020%E5%B9%B46%E6%9C%88%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2020年6月刷题日志
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-24 09:59:00" itemprop="dateCreated datePublished" datetime="2020-06-24T09:59:00+08:00">2020-06-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-10-14 16:15:44" itemprop="dateModified" datetime="2020-10-14T16:15:44+08:00">2020-10-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Leetcode-刷题日志"><a href="#Leetcode-刷题日志" class="headerlink" title="Leetcode 刷题日志"></a>Leetcode 刷题日志</h1><p>就从今天（6.24）开始记录自己的刷题情况吧</p>
+<p>日志说明：文笔很差，想到什么写什么，缺乏逻辑</p>
+<p>把解题思路记下来，顺便督促一下自己不要无脑抄题解</p>
+<p>不知道能坚持多久，希望会够久</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624085941874.png" alt="一个月刷题记录"></p>
+<h2 id="2020-6"><a href="#2020-6" class="headerlink" title="2020.6"></a>2020.6</h2><h3 id="6-24"><a href="#6-24" class="headerlink" title="6.24"></a>6.24</h3><p>今天正好是重回leetcode刷题满一个月，就从今天开始记录自己的刷题实况吧</p>
+<p>上次规律的刷题还是在大一上学期学Python的时候，没想到现在已经是大二期末了。</p>
+<p>刷算法题的感觉让我又回到了高中，很纯粹。</p>
+<p>虽然做不出只能抄作业有的时候挺打击人的，但是做出一道题真的很爽！</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624090225796.png" alt="2020.6.24进展"></p>
+<p><strong>每日一题：</strong></p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200624090745330.png" alt="最接近的三数之和"></p>
+<p>首先排除复杂度为O(N³)的三层循环的解法</p>
+<p>自己想了一会儿没想到怎么解，就去翻了评论，（明明大一刷过这道题，但还是没长进）</p>
+<p>先排序，然后双指针：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span>(<span class="params">self, nums: List[int], target: int</span>) -&gt; int:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        ans = nums[<span class="number">0</span>] + nums[<span class="number">1</span>] + nums[<span class="number">2</span>]</span><br><span class="line">        <span class="comment"># 外层循环是用来判断第一个数的</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(nums)<span class="number">-2</span>):</span><br><span class="line">            l, r = i+<span class="number">1</span>, len(nums)<span class="number">-1</span></span><br><span class="line">            <span class="keyword">while</span> l&lt;r:</span><br><span class="line">                <span class="comment"># 内层循环去找另外两个数</span></span><br><span class="line">                cur = nums[i] + nums[l] + nums[r]</span><br><span class="line">                <span class="keyword">if</span> abs(cur-target)&lt;abs(ans-target):</span><br><span class="line">                    ans = cur</span><br><span class="line">                <span class="keyword">if</span> cur&lt;target:</span><br><span class="line">                    <span class="comment"># 当前的和比目标数小，说明l取小了，应该往右移</span></span><br><span class="line">                    l += <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> cur&gt;target:</span><br><span class="line">                    <span class="comment"># 反之，r指针左移</span></span><br><span class="line">                    r -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">return</span> ans</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<p>排序的时间复杂度O(nlogn)，双指针扫描时间复杂度O(n²)</p>
+<h3 id="6-25"><a href="#6-25" class="headerlink" title="6.25"></a>6.25</h3><p><strong>每日一题</strong>：</p>
+<p>又是没能自己做出题的一天呢</p>
+<p>即使看出了是动态规划，想到转移方程，也解不出题</p>
+<p>最后还是看了评论和题解</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200625091931950.png" alt="单词拆分"></p>
+<blockquote>
+<p>优化前</p>
+<p>使用memos数组来存储字符串的0到 i-1 字串能否被拆分</p>
+<p>初始化memos数组第0个为true，其余为false</p>
+<p>用两层循环遍历字符串</p>
+<p>第一层循环是尾指针，从1到字符串末尾</p>
+<p>第二层循环是头指针，从0循环到 i 前面一位</p>
+<blockquote>
+<p>如果头指针 j 前面的字串可以被拆分（s[0:j]能被字典中的单词拆分，即memos[j] == True），且从头指针到尾指针的字符串在字典中，那么说明[0：i]字串能被拆分，所以memos[i]=True，break跳出循环，避免浪费时间</p>
+</blockquote>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wordBreak</span>(<span class="params">self, s: str, wordDict: List[str]</span>) -&gt; bool:</span></span><br><span class="line">        <span class="comment"># 动态规划</span></span><br><span class="line">        memos = [<span class="literal">False</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)+<span class="number">1</span>)]</span><br><span class="line">        memos[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="comment"># memos数组的第i项代表字符串的0到i-1字串能否被拆分为字典中的单词</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(s)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,i):</span><br><span class="line">                <span class="comment"># 判断[j:i]字串能否被拆分</span></span><br><span class="line">                <span class="keyword">if</span> memos[j] <span class="keyword">and</span> s[j:i] <span class="keyword">in</span> wordDict:</span><br><span class="line">                    memos[i] = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> memos[len(s)]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>优化后</p>
+<p>内循环中判断 s[j:i] in wordDict 时，j是从开始循环的</p>
+<p>但是实际上不用从0，因为最大的单词的长度是固定的，如果从j-i&gt;最大单词长度，那么这个字串不可能在字典中出现</p>
+<p>所以将每次内层循环中j的初始位置变成i-maxWordLength（如果该值小于0，则初始值还是0）</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wordBreak</span>(<span class="params">self, s: str, wordDict: List[str]</span>) -&gt; bool:</span></span><br><span class="line">        <span class="comment"># 动态规划</span></span><br><span class="line">        memos = [<span class="literal">False</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)+<span class="number">1</span>)]</span><br><span class="line">        memos[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="comment"># memos数组的第i项代表字符串的0到i-1字串能否被拆分为字典中的单词</span></span><br><span class="line"></span><br><span class="line">        maxWordLength = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> wordDict:</span><br><span class="line">            maxWordLength = max(maxWordLength, len(i))</span><br><span class="line">        <span class="comment"># 找出字典中的单词的最大长度，减少循环次数</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(s)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(max(<span class="number">0</span>, i-maxWordLength),i):</span><br><span class="line">                <span class="comment"># 判断[j:i]字串能否被拆分 j从存在的最大单词长度开始</span></span><br><span class="line">                <span class="keyword">if</span> memos[j] <span class="keyword">and</span> s[j:i] <span class="keyword">in</span> wordDict:</span><br><span class="line">                    memos[i] = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> memos[len(s)]</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-26"><a href="#6-26" class="headerlink" title="6.26"></a>6.26</h3><p>今天要考计算机硬件，好紧张好紧张</p>
+<p>今天leetcode给面子出了道简单题，赶紧做到题放松一下</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200626091134446.png" alt="6.26每日一题"></p>
+<p>题目很简单 链表去重</p>
+<p>方法1：</p>
+<p>解题思路是遍历一遍链表，把第一次出现地结点的值有序地保存在一个列表之中</p>
+<p>同时用集合去做判重的工作</p>
+<p>最后把这个列表里的值初始化为一个链表</p>
+<p>返回头结点</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicateNodes</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 集合用于去重</span></span><br><span class="line">        <span class="comment"># 如果直接用 head not in nodes 去做判断条件 会浪费很多时间</span></span><br><span class="line">        <span class="comment"># set判重:88ms</span></span><br><span class="line">        <span class="comment"># list判重:2256ms</span></span><br><span class="line">        num_set = set()</span><br><span class="line">        <span class="comment"># nodes列表用于暂存所有的结点值</span></span><br><span class="line">        nodes = []</span><br><span class="line">        <span class="comment"># 判断头结点是否为空 避免空指针问题</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head: <span class="keyword">return</span> head</span><br><span class="line">        <span class="comment"># 一次遍历链表 把所有第一次出现的数加入到nodes中</span></span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">if</span> head.val <span class="keyword">not</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                num_set.add(head.val)</span><br><span class="line">                nodes.append(head.val)</span><br><span class="line">            head = head.next</span><br><span class="line">        <span class="comment"># 初始化返回链表的头结点</span></span><br><span class="line">        head0 = ListNode(nodes[<span class="number">0</span>])</span><br><span class="line">        node = head0</span><br><span class="line">        <span class="comment"># 遍历nodes列表，把所有值初始化为一个结点</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(nodes)):</span><br><span class="line">            cur = ListNode(nodes[i])</span><br><span class="line">            node.next = cur</span><br><span class="line">            node = cur</span><br><span class="line">        <span class="keyword">return</span> head0           </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200626091431598.png" alt="通过结果"></p>
+<p>可以看到用集合判重比用列表判重会快很多很多</p>
+<p>究其原因，python中set底层用的是hash表，list用的是数组，所以判重的速度前者是O(1)，后者是O(n)，当然执行时间会差很多啦。</p>
+<p>方法2：</p>
+<p>使用集合判重</p>
+<p>链表中原地删除重复结点 不另外构造数组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicateNodes</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># 集合用于去重</span></span><br><span class="line">        num_set = set()</span><br><span class="line">        <span class="comment"># 判断头结点是否为空 避免空指针问题</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head: <span class="keyword">return</span> head</span><br><span class="line">        node = head</span><br><span class="line">        <span class="comment"># 因为遍历是用head.next开始的，所以要在第一次循环前手动把head的val加到set中</span></span><br><span class="line">        num_set.add(node.val)</span><br><span class="line">        <span class="keyword">while</span> node <span class="keyword">and</span> node.next:</span><br><span class="line">            nxt = node.next</span><br><span class="line">            <span class="keyword">if</span> nxt.val <span class="keyword">not</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                <span class="comment"># 值不在集合中，就把值加到集合中，然后指针往后移</span></span><br><span class="line">                num_set.add(nxt.val)</span><br><span class="line">                node = node.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 值在集合中，把当前结点的next指针替换成下一个结点的next指针</span></span><br><span class="line">                <span class="comment"># 即实现了删除下一个节点</span></span><br><span class="line">                node.next = nxt.next</span><br><span class="line">        <span class="keyword">return</span> head</span><br></pre></td></tr></table></figure>
+
+<p>最终时间和方法1也差不多</p>
+<h3 id="6-27"><a href="#6-27" class="headerlink" title="6.27"></a>6.27</h3><p>昨天计算机硬件考完有点难受，老师出的都是良心题，但是还是做错了</p>
+<p>今天leetcode又来一道困难题 备受折磨</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200627092131117.png" alt="缺失的第一个正数"></p>
+<p>提示要求时间复杂度O(N)， 那首先就排除了排序。</p>
+<p>O(N)意味着不能循环套循环，那么肯定是用哈希表记录元素出现与否</p>
+<p>但是哈希表的空间复杂度是O(N)，这和题目要求的O(1)又不一样</p>
+<p>我真是想了很久也没想出来，最终还是看了题解</p>
+<p>下面总结一下我的理解</p>
+<ol>
+<li><p>首先要知道最后的答案一定是[1,N+1]中间一个数(N为数组长度），在这个前提下，我们才能把nums这个数组作为哈希表存储。</p>
+</li>
+<li><p>同时为了避免负数和0对我建立哈希表的过程产生影响，先统一把他们变成一个对我没有影响的数。这里就设置为N+1，之所以N+1没影响是因为最后如果返回的值是N+1，不是通过哈希表直接判断的，是通过判断出[1,N]之间的数字都出现了，才能返回N+1。</p>
+</li>
+<li><p>打标记。遍历数组，一般情况下，假设我碰到了一个3（数组长度大于3），那么说明我要在nums数组中通过某种方法记录下来3已经出现过了。这里我们选择把nums[3-1]标记成负数，也就是数组出现的第3个数标记为负数。那么这里还有另外两种情况。</p>
+<ol>
+<li>遍历到一个-5，说明这个数已经被打上了标记，但是5也在[1,N]之间，所以我们应该取-5的绝对值把nums[5-1]打上标记。</li>
+<li>遍历到一个999，超过了数组长度N，那么就不用打标记，因为超出了数组长度无法记录，而且这个999也绝对不可能是答案，所以没有必要处理它。</li>
+</ol>
+<blockquote>
+<p>这个时候，nums数组就相当于一个记录数字是否出现过的哈希表，nums[i]如果是正数，那么i+1这个数字肯定就没有出现过，nums[i]如果为负数，那么i+1这个数字肯定出现过</p>
+</blockquote>
+</li>
+<li><p>再次遍历数组，遇到的第一个大于0的nums[i]，返回i+1，因为是从i=0开始遍历，所以能保证返回的值一定是最小的正数。如果nums中没有正数，就返回N+1。</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">firstMissingPositive</span>(<span class="params">self, nums: List[int]</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 数组原地建立哈希表</span></span><br><span class="line">        N = len(nums)</span><br><span class="line">        <span class="comment"># 1. 将所有负数和0改成N+1（N为数组长度）</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&lt;=<span class="number">0</span>:</span><br><span class="line">                nums[i] = N+<span class="number">1</span></span><br><span class="line">        <span class="comment"># 2. 遍历数组，如果nums[i]在[1,N]之间，就把nums[nums[i] - 1]标记成负数</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            k = abs(i)</span><br><span class="line">            <span class="keyword">if</span> <span class="number">1</span>&lt;=k&lt;=N:</span><br><span class="line">                nums[k<span class="number">-1</span>] = -abs(nums[k<span class="number">-1</span>])</span><br><span class="line">        <span class="comment"># 3. 再次遍历数组，第一个遍历到的正数nums[i]，返回i+1，如果没有正数，返回N+1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&gt;<span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> i+<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> N+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-28"><a href="#6-28" class="headerlink" title="6.28"></a>6.28</h3><p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628085932535.png" alt="长度最小的子数组"></p>
+<p>看题目说明，本以为用前缀数组和时间复杂度为O(n²)可以勉强通过，没想到直接超时</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628090120199.png" alt="1年前我竟然还会做"></p>
+<p>不过超时也可能是python的锅</p>
+<p>思路就是用前缀和数组数组存储nums从0到i的和</p>
+<p>然后[i:j]子数组的和就是前缀和数组的第j项-第i项</p>
+<p>以此来节省用sum方法求和的时间</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minSubArrayLen</span>(<span class="params">self, s: int, nums: List[int]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> sum(nums)&lt;s <span class="keyword">or</span> len(nums)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="comment"># 先求前缀和数组</span></span><br><span class="line">        pre_sum = [<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(nums)):</span><br><span class="line">            pre_sum.append(pre_sum[<span class="number">-1</span>]+nums[i])</span><br><span class="line">        <span class="comment"># pre_sum[i]代表着nums的前i个数的和</span></span><br><span class="line">        ans = len(nums)</span><br><span class="line">        n = len(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> pre_sum[j]-pre_sum[i]&gt;=s:</span><br><span class="line">                    ans = min(ans, j-i)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<p>用java重写了一遍果然勉强能通过</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200628091758084.png"></p>
+<p>当然进阶方法就是换成滑动窗口的方法</p>
+<p>用双指针去判断数组和，比直接套两重循环节省掉浪费的时间</p>
+<p>一边循环一边求和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minSubArrayLen</span>(<span class="params">self, s: int, nums: List[int]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> sum(nums)&lt;s:<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        left, right, tot = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        n = len(nums)</span><br><span class="line">        ans = n</span><br><span class="line">        <span class="keyword">while</span> right&lt;n:</span><br><span class="line">            <span class="keyword">while</span> right&lt;n <span class="keyword">and</span> tot&lt;s:</span><br><span class="line">                tot += nums[right]</span><br><span class="line">                right += <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left&lt;n <span class="keyword">and</span> tot&gt;=s:</span><br><span class="line">                ans = min(ans, right-left)</span><br><span class="line">                tot -= nums[left]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度O(nlogn)</p>
+<h3 id="6-29"><a href="#6-29" class="headerlink" title="6.29"></a>6.29</h3><p>今天早上考了英语，晚上才有时间刷题</p>
+<p>今天的又是一道老题。</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629203510762.png" alt="数组中的第K个最大元素"></p>
+<p>先偷个懒</p>
+<p>直接用python自带的排序把nums数组排个序，然后返回数组的倒数第K个</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        <span class="keyword">return</span> nums[-k]</span><br></pre></td></tr></table></figure>
+
+<p>不出意外，这种耍流氓的方法就是快</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629203719100.png" alt="执行结果"></p>
+<p>那么现在问题来了，如果不用排序该怎么实现呢</p>
+<ul>
+<li>维护一个递减栈</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        stk = []</span><br><span class="line">        <span class="comment"># 维护一个递减栈，栈的最大容量为k</span></span><br><span class="line">        <span class="comment"># 栈的最底下塞最大的数，越靠近top越小</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> stk:</span><br><span class="line">                <span class="comment"># 当栈为空，直接把数压进去</span></span><br><span class="line">                stk.append(i)</span><br><span class="line">            <span class="keyword">elif</span> i&lt;stk[<span class="number">-1</span>] <span class="keyword">and</span> len(stk)==k:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 栈非空，就去栈中找到i应该待的位置</span></span><br><span class="line">                <span class="comment"># 把比i小的先全pop出</span></span><br><span class="line">                <span class="comment"># 直到栈顶元素比i大 这个时候把i压入 同时把刚刚pop出来的数再push回去</span></span><br><span class="line">                tmp = []</span><br><span class="line">                <span class="comment"># 要注意pop时，栈是否已经空了</span></span><br><span class="line">                <span class="keyword">while</span> len(stk)&gt;<span class="number">0</span> <span class="keyword">and</span> stk[<span class="number">-1</span>]&lt;i:</span><br><span class="line">                    tmp.append(stk.pop())</span><br><span class="line">                stk.append(i)</span><br><span class="line">                <span class="comment"># 确保栈的长度不超过k</span></span><br><span class="line">                <span class="keyword">while</span> len(stk)&lt;k <span class="keyword">and</span> len(tmp)&gt;<span class="number">0</span>:</span><br><span class="line">                    stk.append(tmp.pop())</span><br><span class="line">        <span class="keyword">return</span> stk[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度O(n²)，说实话我以为是会报超时错误的</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629211234594.png" alt="递减栈"></p>
+<ul>
+<li>快速排序的选择方法</li>
+</ul>
+<p>在快排中，使用的是分治的思想，在每一次为了实现排序的过程之中，每次递归的小任务是</p>
+<ul>
+<li>首先在数组的[left,right]区域中确定一个pivot（支点）</li>
+<li>通过交换的方法，把比pivot小的数换到pivot的左边，比pivot大的数换到pivot的右边</li>
+<li>最终实现pivot的位置就是最终排序完数组的位置</li>
+<li>接着再对[left，pivot的左边],[pivot的右边,right]这两段数组分别继续上述操作</li>
+</ul>
+<p>这里题目要求找到第k大的数字，也就是找到排序之后倒数第k个数</p>
+<p>其实数组本身不需要排序，只需要使用上述快排的思想，去找到这个最终处于倒数第k个位置的pivot即可</p>
+<p>那么一开始我们的left=0,right=len(nums)-1，</p>
+<p>第一次会返回pivot的最终位置index，与len(nums)-k比较，有三种情况</p>
+<ul>
+<li>相等，那就是我们要找的数返回nums[index]即可</li>
+<li>index&lt;len(nums)-k，说明这个pivot在我们要找的数的左边，那就继续在[index+1,right]这个区间找</li>
+<li>index&gt;len(nums)-k，说明这个pivot在我们要找的数的右边，那就继续在[left,index-1]这个区间找</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 使用快速排序的思想</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">nums, left, right</span>):</span></span><br><span class="line">            <span class="comment"># 这个函数作用是找到nums[left]在数组中应该处于的位置</span></span><br><span class="line">            <span class="comment"># 把所有比他小的数都移到他左边 比他大的数都在他的右边</span></span><br><span class="line">            pivot = nums[left]</span><br><span class="line">            j = left</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(left+<span class="number">1</span>,right+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> nums[i]&lt;pivot:</span><br><span class="line">                    <span class="comment"># 把所有小于pivot的元素全放到前面</span></span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                    nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line">            nums[left], nums[j] = nums[j], nums[left]</span><br><span class="line">            <span class="keyword">return</span> j</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(nums)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            index = partition(nums, left, right)</span><br><span class="line">            <span class="keyword">if</span> index==len(nums)-k:</span><br><span class="line">                <span class="keyword">return</span> nums[index]</span><br><span class="line">            <span class="keyword">elif</span> index&lt;len(nums)-k:</span><br><span class="line">                left = index+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = index<span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200629215451981.png" alt="快速排序的选择方法"></p>
+<p>上面那个方法在极端的测试(数组已经是倒序或者正序)用例会导致时间复杂度为O(n²)</p>
+<p>可以对pivot的选择位置进行优化，减少在极端情况的时间</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findKthLargest</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 使用快速排序的思想</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">nums, left, right</span>):</span></span><br><span class="line">            <span class="comment"># 这个函数作用是找到nums[left]在数组中应该处于的位置</span></span><br><span class="line">            <span class="comment"># 把所有比他小的数都移到他左边 比他大的数都在他的右边</span></span><br><span class="line">            ind = random.randint(left,right)</span><br><span class="line">            nums[ind], nums[left]=nums[left], nums[ind]</span><br><span class="line">            pivot = nums[ind]</span><br><span class="line">            j = left</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(left+<span class="number">1</span>,right+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> nums[i]&lt;pivot:</span><br><span class="line">                    <span class="comment"># 把所有小于pivot的元素全放到前面</span></span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                    nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line">            nums[left], nums[j] = nums[j], nums[left]</span><br><span class="line">            <span class="keyword">return</span> j</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(nums)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            index = partition(nums, left, right)</span><br><span class="line">            <span class="keyword">if</span> index==len(nums)-k:</span><br><span class="line">                <span class="keyword">return</span> nums[index]</span><br><span class="line">            <span class="keyword">elif</span> index&lt;len(nums)-k:</span><br><span class="line">                left = index+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = index<span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630083526365.png"></p>
+<p>可以看到随机选取的方法在有的时候确实能起到优化算法的作用</p>
+<p>当然由于这道是所谓的经典面试题，我们得尽量把官方题解提供的方法都学会</p>
+<p>除去偷懒用库函数的方法和用快排思想的选择方法，还有一种利用推排序的选择的方法</p>
+<p>去年数据结构课上是学过堆排序的，但是问题在于当时老师只需要我们理解画图，没要求我们用代码去实现 </p>
+<p>少壮不努力，老大徒伤悲，只能现在再从头学啦</p>
+<p>官方的ppt非常形象，简单来说堆排序就是建一个二叉树，然后不断地调整和删除的过程</p>
+<ul>
+<li>第一步：建堆</li>
+</ul>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/1.png" alt="建堆"></p>
+<ul>
+<li>第二步：调整。通过交换非叶子节点和子节点的值，来获取一个大根堆（所有的父结点都大于自己的两个子节点）</li>
+</ul>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/7.png" alt="img"></p>
+<ul>
+<li>第三步：删除。大根堆的含义就是最大的结点在根部。既然这个时候我们知道了最大的数的值(root.val)，那么根节点对我们来说就没有意义了，因为我们想要找的是第k大的数，直接把根节点删掉。这个时候把最后一个结点1先挪到根节点的位置，然后再对整棵树进行调整，按上一步的方法调整为大根堆。</li>
+<li>由此循环，直到删除了k-1次最大元素值后，最后调整一次大根堆，这时根节点的值就是我们要找的整个数组中第k大的值</li>
+</ul>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/8.png" alt="img"></p>
+<p>用java写是因为在写比较复杂的数据结构时候习惯了java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findKthLargest</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> heapSize = nums.length;</span><br><span class="line">        buildMaxHeap(nums, heapSize);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = nums.length-<span class="number">1</span>;i&gt;=nums.length-k+<span class="number">1</span>;i--)&#123;</span><br><span class="line">            <span class="comment">// 每次循环把最后一个结点的值调到根节点上</span></span><br><span class="line">            swap(nums, <span class="number">0</span>, i);</span><br><span class="line">            heapSize--;</span><br><span class="line">            maxHeapify(nums, <span class="number">0</span>, heapSize);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">buildMaxHeap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> heapSize)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 自下向上建大根堆</span></span><br><span class="line">        <span class="comment">// 从最后一棵子树的根节点开始调整</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = heapSize/<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            maxHeapify(a, i, heapSize);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">maxHeapify</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> heapSize)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 因为是完全二叉树，所以对于结点i来说，它的左右结点的位置可以直接用i表示出来</span></span><br><span class="line">        <span class="keyword">int</span> l = i*<span class="number">2</span> + <span class="number">1</span>, r =i*<span class="number">2</span> +<span class="number">2</span>, largest = i;</span><br><span class="line">        <span class="comment">// 找到结点和它的两个子节点的值的最大值</span></span><br><span class="line">        <span class="keyword">if</span> (l&lt;heapSize &amp;&amp; a[l] &gt; a[largest])&#123;</span><br><span class="line">            largest = l;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (r&lt;heapSize &amp;&amp; a[r] &gt; a[largest])&#123;</span><br><span class="line">            largest = r;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (largest != i)&#123;</span><br><span class="line">            <span class="comment">// 当该结点的子节点有更大的值的时候需要交换</span></span><br><span class="line">            swap(a, i, largest);</span><br><span class="line">            <span class="comment">// 同时由于子结点的值变了，那么还需要继续调整子树</span></span><br><span class="line">            maxHeapify(a, largest, heapSize);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630090913150.png" alt="不愧是你java.jpg"></p>
+<h3 id="6-30"><a href="#6-30" class="headerlink" title="6.30"></a>6.30</h3><p>6月的最后一天了呀</p>
+<p>继续加油吧</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092203580.png" alt="嗷嗷嗷"></p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092258740.png" alt="两个栈实现队列"></p>
+<p>因为是简单题，就先随性写了一个方法，题目都告诉了方法，其实还是很简单的</p>
+<ul>
+<li><p>入队：用stk1去存储数据</p>
+</li>
+<li><p>出队：因为stk1是按栈的顺序存的数据，所以在模拟队列出队时，队首元素是放在栈底的</p>
+</li>
+<li><p>这个时候就用stk2先把stk1的所有数据倒进去，一个pop，一个push（有、、恶心）</p>
+</li>
+<li><p>把stk1倒空之后，stk2的栈顶元素就是队首元素了，把它的值先pop出去，放到临时变量val里</p>
+</li>
+<li><p>再把stk2中剩余所有数据倒回stk1中</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CQueue</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; stk1;</span><br><span class="line">    Stack&lt;Integer&gt; stk2;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.stk1 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">this</span>.stk2 = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">appendTail</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        stk1.push(value);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteHead</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (stk1.empty())&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!stk1.empty())&#123;</span><br><span class="line">            stk2.push(stk1.pop());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> val = stk2.pop();</span><br><span class="line">        <span class="keyword">while</span>(!stk2.empty())&#123;</span><br><span class="line">            stk1.push(stk2.pop());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>随便写的东西果然时间复杂度就是丑陋。</p>
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630092829718.png"></p>
+<p>参考了官方题解和评论区之后的优化版</p>
+<ul>
+<li>实际上在删除队首元素时，不需要保证元素一直在stk1中</li>
+<li>只要保证stk2的元素是队列前面的那些元素，它的元素顺序是按照队列来的</li>
+<li>stk1只要负责向stk2传递数据</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CQueue</span> </span>&#123;</span><br><span class="line">    Deque&lt;Integer&gt; stk1;</span><br><span class="line">    Deque&lt;Integer&gt; stk2;</span><br><span class="line">    <span class="keyword">int</span> size;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.stk1 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">this</span>.stk2 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">this</span>.size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">appendTail</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        stk1.push(value);</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteHead</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(size ==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(stk2.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">while</span>(!stk1.isEmpty())&#123;</span><br><span class="line">                stk2.push(stk1.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">return</span> stk2.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ethanloo/markdownImage/raw/master/img/image-20200630094839703.png"></p>
+<h2 id="七月再见啦"><a href="#七月再见啦" class="headerlink" title="七月再见啦"></a>七月再见啦</h2><p> :@(坐等) </p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" rel="prev" title="数据库课程笔记">
+      <i class="fa fa-chevron-left"></i> 数据库课程笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/14/%E6%90%AC%E5%AE%B6%E5%95%A6/" rel="next" title="搬家啦">
+      搬家啦 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Leetcode-%E5%88%B7%E9%A2%98%E6%97%A5%E5%BF%97"><span class="nav-number">1.</span> <span class="nav-text">Leetcode 刷题日志</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-6"><span class="nav-number">1.1.</span> <span class="nav-text">2020.6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-24"><span class="nav-number">1.1.1.</span> <span class="nav-text">6.24</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-25"><span class="nav-number">1.1.2.</span> <span class="nav-text">6.25</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-26"><span class="nav-number">1.1.3.</span> <span class="nav-text">6.26</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-27"><span class="nav-number">1.1.4.</span> <span class="nav-text">6.27</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-28"><span class="nav-number">1.1.5.</span> <span class="nav-text">6.28</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-29"><span class="nav-number">1.1.6.</span> <span class="nav-text">6.29</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-30"><span class="nav-number">1.1.7.</span> <span class="nav-text">6.30</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E6%9C%88%E5%86%8D%E8%A7%81%E5%95%A6"><span class="nav-number">1.2.</span> <span class="nav-text">七月再见啦</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
